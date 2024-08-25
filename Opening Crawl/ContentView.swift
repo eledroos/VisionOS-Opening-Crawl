@@ -12,7 +12,7 @@ struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
     @State private var showImmersiveSpace = false
     @State private var showContentView = true // Controls the visibility of the entire ContentView
-    @State private var textAnimationCompleted = false // Controls the reappearance of the window
+    @State private var textAnimationCompleted = false // Controls the reappearance of the window contents
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
@@ -48,9 +48,5 @@ struct ContentView: View {
             showContentView = true
         }
     }
-}
-
-#Preview {
-    ContentView(viewModel: ViewModel())
 }
 

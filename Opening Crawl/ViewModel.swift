@@ -33,11 +33,10 @@ class ViewModel: ObservableObject {
         // Calculate the width of the text block
         let textWidth = textEntity.model?.mesh.bounds.extents.x ?? 0
         
-        textEntity.position = SIMD3(x: -textWidth / 2, y: -3, z: 2) // Start near bottom and close to the viewer
+        textEntity.position = SIMD3(x: -textWidth / 2, y: -3, z: 2) // Start near bottom and close to the viewer, centered on the text block
         textEntity.transform.rotation = simd_quatf(angle: -.pi / 3.5, axis: SIMD3(x: 1, y: 0, z: 0)) // Tilt back
         contentEntity.addChild(textEntity)
 
-        // Adjusted animation for Star Wars crawl effect
         let animation = generateCrawlAnimation(entity: textEntity, duration: duration)
         textEntity.playAnimation(animation, transitionDuration: duration, startsPaused: false)
 
@@ -57,6 +56,7 @@ class ViewModel: ObservableObject {
             z: start.z - 10 // Move away
         )
         
+        // Maintain rotation axis
         let rotation = entity.transform.rotation
 
         let linear = FromToByAnimation<Transform>(

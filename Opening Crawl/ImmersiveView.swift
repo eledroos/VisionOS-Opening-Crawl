@@ -19,6 +19,7 @@ struct ImmersiveView: View {
             // Spawn the hardcoded Star Wars crawl text
             // This text shouldn't be too long in width.
             // You might want to manually truncate it.
+            // It will be automatically centered in the ViewModel.
             let crawlText = """
             Episode IV
             A NEW HOPE
@@ -33,7 +34,7 @@ struct ImmersiveView: View {
 
             // Optionally remove the text after a delay
             Task {
-                await viewModel.removeTextEntities(textEntities: [textEntity], lifetime: 20)
+                await viewModel.removeTextEntities(textEntities: [textEntity], lifetime: 15)
             }
         }
     }
