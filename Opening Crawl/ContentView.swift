@@ -18,16 +18,9 @@ struct ContentView: View {
 
     var body: some View {
         if showContentView { // Show the content view only if showContentView is true
-                VStack {
-                    Text("Star Wars Opening Crawl")
-                        .font(.largeTitle)
-                        .padding()
-
-                    Button("Start Opening Crawl") {
-                        startCrawl()
-                    }
-                    .padding()
-                }
+            Button("Start Opening Crawl") {
+                startCrawl()
+            }
         }
     }
 
