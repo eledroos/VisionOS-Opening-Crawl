@@ -18,7 +18,6 @@ struct ContentView: View {
 
     var body: some View {
         if showContentView { // Show the content view only if showContentView is true
-            NavigationStack {
                 VStack {
                     Text("Star Wars Opening Crawl")
                         .font(.largeTitle)
@@ -29,7 +28,6 @@ struct ContentView: View {
                     }
                     .padding()
                 }
-            }
         }
     }
 

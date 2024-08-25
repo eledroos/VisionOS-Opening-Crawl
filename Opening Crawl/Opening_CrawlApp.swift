@@ -14,7 +14,7 @@ struct Opening_CrawlApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(viewModel: viewModel)
-        }
+        }.windowStyle(.plain)
         
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView(viewModel: viewModel)
