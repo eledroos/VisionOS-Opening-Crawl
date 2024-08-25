@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
 
     @ObservedObject var viewModel: ViewModel
-    @State private var showImmersiveSpace = false
     @State private var showContentView = true // Controls the visibility of the entire ContentView
     @State private var textAnimationCompleted = false // Controls the reappearance of the window contents
 
